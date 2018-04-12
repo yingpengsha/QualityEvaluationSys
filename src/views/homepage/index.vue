@@ -132,7 +132,7 @@
                         </div>
                         <el-tabs tab-position="left" style="height:300px" @tab-click="clickTab" >
                             <el-tab-pane label="入学测评" style="width:100%">
-                                <pie-chart ref="gradeTabsOne" ></pie-chart>
+                                <raddar-chart ref="gradeTabsOne" id="gradeTabsOne"></raddar-chart>
                             </el-tab-pane>
                             <el-tab-pane label="学中测评">
                                 <comprehensive-quality-model ref="gradeTabsTwo" :comprehensive-quality-data="midComprehensiveQualityData"></comprehensive-quality-model>
@@ -197,7 +197,7 @@
     import { fetchListGreat } from '@/api/otherImportant'
     import storage from '@/utils/storage'
     import { fetchListHighLight } from '@/api/highlighting'
-    import PieChart from './components/PieChart'
+
     export default {
     
       data() {
@@ -251,7 +251,6 @@
         }
   },
       components: {
-        PieChart,
         RaddarChart,
         ComprehensiveQualityModel
       },
